@@ -18,7 +18,7 @@ class WechatController extends Controller{
             $echostr = $request->get("echostr");
         }
         
-        return $echostr->setContent($echostr);
+        return $echostr;
     }
 
 
