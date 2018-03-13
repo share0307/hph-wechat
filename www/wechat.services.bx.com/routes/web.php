@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function (\Illuminate\Http\Request $request) {
+    if($request->has('echostr')){
+        return response()->setContent($request->has('echostr'));
+    }
     return view('welcome');
 });
