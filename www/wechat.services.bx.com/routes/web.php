@@ -13,7 +13,7 @@
 
 Route::get('/', function (\Illuminate\Http\Request $request) {
     if($request->has('echostr')){
-        return response()->setContent($request->get('echostr'));
+        return $request->get('echostr');
     }
     return view('welcome');
 });
